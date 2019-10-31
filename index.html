@@ -5,23 +5,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>小米滚动轮播图</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <style>
         * {
-            margin: 0;
             padding: 0;
-            background-color:aquamarine
+            margin: 0;
+            list-style: none;
         }
 
-        
+        @font-face {
+            font-family: "icomoon";
+            src: url("fonts/icomoon.eot?7kkyc2");
+            src: url("fonts/icomoon.eot?7kkyc2#iefix") format("embedded-opentype"),
+                url("fonts/icomoon.ttf?7kkyc2") format("truetype"),
+                url("fonts/icomoon.woff?7kkyc2") format("woff"),
+                url("fonts/icomoon.svg?7kkyc2#icomoon") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .banner .btns span {
+            font-family: "icomoon";
+            font-size: 50px;
+            color: rgb(247, 240, 240);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 10px;
+            z-index: 3;
+        }
+
+        .banner .btns span.btn-R {
+            font-family: "icomoon";
+            position: absolute;
+            right: 8px;
+        }
+
+        .btns span:hover {
+            color: rgb(0, 0, 0, 0.5);
+        }
+
+        .banner {
+            width: 1226px;
+            height: 460px;
+            position: relative;
+            margin: 50px auto;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner ul {
+            width: 9999px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+
+        }
+
+        .banner ul li {
+            float: left;
+            width: 1226px;
+            height: 460px;
+        }
+
+        .banner ul li img {
+            width: 1226px;
+            height: 460px;
+        }
+
+
+        .banner ol {
+            width: 97px;
+            height: 13px;
+            padding-left: 4px;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            text-align: center;
+            border-radius: 20px;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .banner ol li {
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+            margin-right: 5px;
+            float: left;
+            cursor: pointer;
+            background: rgb(250, 249, 249);
+            border-radius: 50%;
+        }
+
+        .banner ol li.cur {
+            background: #f40;
+        }
     </style>
 </head>
 
 <body>
-    <div id="center">
-       <h1>hello world</h1>
+    <div class="banner">
+        <ul id="train">
+            <li><img src="163/banner1.jpg" alt=""></li>
+            <li><img src="163/xmad_15471333544761_iIFgE.jpg" alt=""></li>
+            <li><img src="163/xmad_154592128461_jKUWy.jpg" alt=""></li>
+            <li><img src="163/xmad_15472198894648_JRZLz.jpg" alt=""></li>
+            <li><img src="163/xmad_15470007237153_soclQ.jpg" alt=""></li>
+            <li><img src="163/xmad_15471129430061_HgNMC.jpg" alt=""></li>
+        </ul>
+        <div class="btns">
+            <a href="#"><span class="btn-L"></span></a>
+            <a href="#"><span class="btn-R"></span></a>
+        </div>
+        <ol>
+            <li class="cur"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
     </div>
-    </div>
+
+    <script>
+        var $banner = $('.banner');
+        //获取右按钮
+        var $btnL = $('.btn-L');
+        var $btnR = $('.btn-R');
+        var $ul = $('#train');
+        var $ol_li = $('ol li');
+        var length = $('ul li').length;
+        $('ul li:first-child').clone().appendTo('ul');
+        var index = 0;
+        //设置定时器
+        var timer = setInterval(change, 2000);
+        //鼠标悬停 停止定时器
+        $banner.mouseover(function () {
+            clearInterval(timer);
+        })
+        //鼠标离开开启定时器
+        $banner.mouseleave(function () {
+            clearInterval(timer);
+            timer = setInterval(change, 2000);
+        })
+        //封装右按钮函数
+        function change() {
+            if ($ul.is(':animated')) {
+                return;
+            }
+            index++;
+            if (index > length) {
+                index = 1;
+                $ul.css('left', '0');
+            }
+            $ul.animate({ left: -1226 * index }, 500);
+            var i = index <= length - 1 ? index : 0;
+            $ol_li.eq(i).addClass('cur').siblings().removeClass('cur');
+        }
+        $btnR.click(change);
+
+        //注册左按钮事件
+        $btnL.click(function () {
+            if ($ul.is(':animated')) {
+                return;
+            }
+            index--;
+            if (index < 0) {
+                $ul.css('left', '-7356px');
+                index = length - 1;
+            }
+            $ul.animate({ left: -1226 * index }, 500)
+            $ol_li.eq(index).addClass('cur').siblings().removeClass('cur');
+        })
+
+        $ol_li.mouseenter(function () {
+            index = $ol_li.index($(this));
+
+            $ul.stop(true).animate({ left: -1226 * index }, 500);
+            $(this).addClass('cur').siblings().removeClass('cur');
+        })
+
+
+    </script>
 </body>
 
 </html>
