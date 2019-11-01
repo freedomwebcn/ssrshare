@@ -3,197 +3,68 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>小米滚动轮播图</title>
+ 
+    <title>教程</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            list-style: none;
+        .container .dowload {
+            width: 100%;
         }
-
-        @font-face {
-            font-family: "icomoon";
-            src: url("fonts/icomoon.eot?7kkyc2");
-            src: url("fonts/icomoon.eot?7kkyc2#iefix") format("embedded-opentype"),
-                url("fonts/icomoon.ttf?7kkyc2") format("truetype"),
-                url("fonts/icomoon.woff?7kkyc2") format("woff"),
-                url("fonts/icomoon.svg?7kkyc2#icomoon") format("svg");
-            font-weight: normal;
-            font-style: normal;
+        .container .dowload h2 {
+            font-size: 25px;
         }
-
-        .banner .btns span {
-            font-family: "icomoon";
-            font-size: 50px;
-            color: rgb(247, 240, 240);
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-left: 10px;
-            z-index: 3;
-        }
-
-        .banner .btns span.btn-R {
-            font-family: "icomoon";
-            position: absolute;
-            right: 8px;
-        }
-
-        .btns span:hover {
-            color: rgb(0, 0, 0, 0.5);
-        }
-
-        .banner {
-            width: 1226px;
-            height: 460px;
-            position: relative;
-            margin: 50px auto;
-            overflow: hidden;
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .banner ul {
-            width: 9999px;
-            position: absolute;
-            left: 0;
-            top: 0;
-
-
-        }
-
-        .banner ul li {
-            float: left;
-            width: 1226px;
-            height: 460px;
-        }
-
-        .banner ul li img {
-            width: 1226px;
-            height: 460px;
+        .container .dowload :nth-child(2) {
+            font-size: 16px;
+            line-height: 1.266667rem;
         }
 
 
-        .banner ol {
-            width: 97px;
-            height: 13px;
-            padding-left: 4px;
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            text-align: center;
-            border-radius: 20px;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.3);
+        .container .install{
+            width:  100%;
         }
-
-        .banner ol li {
-            margin: 3px;
-            width: 8px;
-            height: 8px;
-            margin-right: 5px;
-            float: left;
-            cursor: pointer;
-            background: rgb(250, 249, 249);
-            border-radius: 50%;
+        .container .install h2{
+            font-size: 16px;
+            line-height:  1.266667rem;
         }
-
-        .banner ol li.cur {
-            background: #f40;
-        }
-        h1{
-            text-align: center;
+        .container .install img{
+            width: 6.666667rem;
+            height: 5.333333rem;
+          
+            
         }
     </style>
 </head>
 
 <body>
-    <h1>刘心缘是个牲口</h1>
-    <div class="banner">
-        <ul id="train">
-            <li><img src="images/banner1.jpg" alt=""></li>
-            <li><img src="images/xmad_15471333544761_iIFgE.jpg" alt=""></li>
-            <li><img src="images/xmad_154592128461_jKUWy.jpg" alt=""></li>
-            <li><img src="images/xmad_15472198894648_JRZLz.jpg" alt=""></li>
-            <li><img src="images/xmad_15470007237153_soclQ.jpg" alt=""></li>
-            <li><img src="images/xmad_15471129430061_HgNMC.jpg" alt=""></li>
-        </ul>
-        <div class="btns">
-            <a href="#"><span class="btn-L"></span></a>
-            <a href="#"><span class="btn-R"></span></a>
+    <div class="container">
+
+        <div class="dowload">
+            <h2 class="text-primary">电脑端配置教程</h2>
+            <p>SSR 电脑端下载</p>
+            <p>
+                <a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.2/ShadowsocksR-win-4.9.2.zip">
+                https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.2/ShadowsocksR-win-4.9.2.zip</a>
+            </p>
         </div>
-        <ol>
-            <li class="cur"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ol>
+        <div class="install">
+            <h2>SSR Windows客户端安装及运行</h2>
+            <p class="text-danger">
+                下载完成后，解压，然后后运行ShadowsocksR-dotnet2.0.exe 或 ShadowsocksR-dotnet4.0.exe 即可
+            </p>
+            <img src="images/01.png" alt="">
+        </div>
+
+
     </div>
 
-    <script>
-        var $banner = $('.banner');
-        //获取右按钮
-        var $btnL = $('.btn-L');
-        var $btnR = $('.btn-R');
-        var $ul = $('#train');
-        var $ol_li = $('ol li');
-        var length = $('ul li').length;
-        $('ul li:first-child').clone().appendTo('ul');
-        var index = 0;
-        //设置定时器
-        var timer = setInterval(change, 2000);
-        //鼠标悬停 停止定时器
-        $banner.mouseover(function () {
-            clearInterval(timer);
-        })
-        //鼠标离开开启定时器
-        $banner.mouseleave(function () {
-            clearInterval(timer);
-            timer = setInterval(change, 2000);
-        })
-        //封装右按钮函数
-        function change() {
-            if ($ul.is(':animated')) {
-                return;
-            }
-            index++;
-            if (index > length) {
-                index = 1;
-                $ul.css('left', '0');
-            }
-            $ul.animate({ left: -1226 * index }, 500);
-            var i = index <= length - 1 ? index : 0;
-            $ol_li.eq(i).addClass('cur').siblings().removeClass('cur');
-        }
-        $btnR.click(change);
-
-        //注册左按钮事件
-        $btnL.click(function () {
-            if ($ul.is(':animated')) {
-                return;
-            }
-            index--;
-            if (index < 0) {
-                $ul.css('left', '-7356px');
-                index = length - 1;
-            }
-            $ul.animate({ left: -1226 * index }, 500)
-            $ol_li.eq(index).addClass('cur').siblings().removeClass('cur');
-        })
-
-        $ol_li.mouseenter(function () {
-            index = $ol_li.index($(this));
-
-            $ul.stop(true).animate({ left: -1226 * index }, 500);
-            $(this).addClass('cur').siblings().removeClass('cur');
-        })
 
 
-    </script>
+
 </body>
 
 </html>
