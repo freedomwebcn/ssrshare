@@ -1,0 +1,105 @@
+ body {
+            min-width: 320px;
+            max-width: 750px;
+            width: 10rem;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-family: Arial, Helvetica;
+            background: #f2f2f2;
+        }
+h3,
+h2 {
+    font-weight: normal;
+    }
+
+i {
+     font-style: normal;
+    }
+
+        h2 {
+            text-align: center;
+            color: #144a74;
+        }
+
+        p {
+            margin-left: .266667rem;
+            margin-right: .266667rem;
+        }
+
+      
+
+        .explain div>h3 {
+            font-size: 18px;
+            color: #10aec2;
+            margin-left: .266667rem;
+            margin-bottom: .16rem;
+        }
+
+        .explain :nth-child(2) {
+            background-color: #f9f4dc;
+        }
+
+        .explain div :nth-child(2) {
+            font-size: 16px;
+            text-indent: 2em;
+            color: #ed556a;
+            margin-top: 0px;
+        }
+
+        .explain div .message {
+            text-align: center;
+            color: #2b73af;
+            line-height: 17px;
+            font-size: 15px;
+        }
+
+        .ssr {
+            background-color: #e2e1e4;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin: 0 .133333rem 0 .133333rem;
+        }
+        .ssr div{
+            font-size: 13px;
+        }
+
+        .ssr h2{
+            margin-bottom: 0;
+        }
+        .ssr em {
+            display: inline-block;
+            width: .266667rem;
+            height: .266667rem;
+            margin-left: .266667rem;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .ssr em, 
+        .ssr i {
+            vertical-align: middle;
+        }
+
+        .ssr p {
+            margin-left: .666667rem;
+            margin-right: .533333rem;
+           
+        }
+
+        .ssr :nth-child(3) {
+            font-size: 13px;
+        }
+
+        .v2ray {
+            word-wrap: break-word;
+            word-break: break-all;
+           
+        }
+
+        .v2ray em {
+            background-color: rgb(8, 248, 8);
+        }
+        .v2ray .copy_btn i {
+            color: #10aec2;
+        }

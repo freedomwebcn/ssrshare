@@ -10,106 +10,7 @@
     <script src="javascript/flexible.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
     <link rel="stylesheet" href="./css/normalize.css">
-    <style>
-        body {
-            min-width: 320px;
-            max-width: 750px;
-            width: 10rem;
-            margin: 0 auto;
-            line-height: 1.5;
-            font-family: Arial, Helvetica;
-            background: #f2f2f2;
-        }
-
-        h3,
-        h2 {
-            font-weight: normal;
-        }
-
-        i {
-            font-style: normal;
-        }
-
-        h2 {
-            text-align: center;
-            color: #144a74;
-        }
-
-        p {
-            margin-left: .266667rem;
-            margin-right: .266667rem;
-        }
-
-        em i {
-            vertical-align: middle;
-
-        }
-
-        .explain div>h3 {
-            font-size: 18px;
-            color: #10aec2;
-            margin-left: .266667rem;
-            margin-bottom: .16rem;
-        }
-
-        .explain :nth-child(2) {
-            background-color: #f9f4dc;
-        }
-
-        .explain div :nth-child(2) {
-            font-size: 16px;
-            text-indent: 2em;
-            color: #ed556a;
-            margin-top: 0px;
-        }
-
-        .explain div .message {
-            text-align: center;
-            color: #2b73af;
-            line-height: 17px;
-            font-size: 15px;
-        }
-
-        .ssr {
-            background-color: #e2e1e4;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            margin: 0 .133333rem 0 .133333rem;
-        }
-
-        .ssr em {
-            display: inline-block;
-            width: .266667rem;
-            height: .266667rem;
-            margin-left: .266667rem;
-            background-color: red;
-            border-radius: 50%;
-        }
-
-        .ssr p {
-            margin-left: .666667rem;
-            margin-right: .533333rem;
-        }
-
-        .ssr :nth-child(3) {
-            font-size: 13px;
-        }
-
-        .v2ray {
-            word-wrap: break-word;
-            word-break: break-all;
-           
-        }
-
-        .v2ray em {
-            background-color: rgb(8, 248, 8);
-        }
-        .v2ray .copy_btn i {
-            color: #10aec2;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -131,43 +32,32 @@
 
     <div class="ssr">
         <h2>SSR链接</h2>
-        <em></em>
-        <i>状态: 不可用</i>
-        <p>故障描述: 目前GFW(防火墙)检测力度加大,使用SSR会出现断流(时而有网时而没网)情况</p>
-        <p>SSR链接: 暂无！请使用V2链接翻墙!</p>
+        <div>
+            <em></em>
+            <i>状态: 不可用</i>
+            <p>故障描述: 目前GFW(防火墙)检测力度加大,使用SSR会出现断流(时而有网时而没网)情况</p>
+            <p>SSR链接: 暂无！请使用V2ray链接翻墙!</p>
+        </div>
+
     </div>
 
     <div class="v2ray ssr">
         <h2>V2ray链接</h2>
-        <em></em>
-        <i>状态: 可用</i>
-        <p id="copy_text" style="display:none">
-            vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIm1laWp1eXVhbi50b3AiLA0KICAiYWRkIjogIm1laWp1eXVhbi50b3AiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiN2M2ZDU1NGUtYWQ2My00NTU4LTllNzMtYTNhZTliYjJhNjhlIiwNCiAgImFpZCI6ICIyMzMiLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogIm1laWp1eXVhbi50b3AiLA0KICAicGF0aCI6ICIvIiwNCiAgInRscyI6ICJ0bHMiDQp9
-        </p>
-        <p class="copy_btn">
-            V2ray链接: <i class="copy">点我复制</i>
-        </p>
+        <div>
+            <em></em>
+            <i>状态: 可用</i>
+            <p id="copy_text" style="display:none">
+                vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIm1laWp1eXVhbi50b3AiLA0KICAiYWRkIjogIm1laWp1eXVhbi50b3AiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiN2M2ZDU1NGUtYWQ2My00NTU4LTllNzMtYTNhZTliYjJhNjhlIiwNCiAgImFpZCI6ICIyMzMiLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogIm1laWp1eXVhbi50b3AiLA0KICAicGF0aCI6ICIvIiwNCiAgInRscyI6ICJ0bHMiDQp9
+            </p>
+            <p class="copy_btn">
+                V2ray链接: <i class="copy">点我复制</i>
+            </p>
+            <p>更新时间：2019/11/24</p>
+        </div>
+
 
     </div>
-
-
-
-
-    <script>
-         $(".copy").click(function () {
-                copyText()
-            });
-        function copyText() {
-            $("body").after("<input id='copyVal'></input>");
-            var text = document.getElementById("copy_text").innerText;;
-            var input = document.getElementById("copyVal");
-            input.value = text;//修改文本框的内容
-            input.select();// 选中文本
-            document.execCommand("copy");//执行浏览器复制命令
-            $("#copyVal").remove();
-            alert("复制成功");
-        }
-    </script>
+    <script src="./javascript/index.js"></script>
 </body>
 
 </html>
