@@ -81,7 +81,6 @@
      display: inline-block;
      width: 10px;
      height: 10px;
-     vertical-align: middle;
      margin-left: .266667rem;
      background-color: red;
      border-radius: 50%;
@@ -96,11 +95,7 @@
  }
 
 
- .ssr .state {
-     display: flex;
-     align-items: center;
- }
-
+ 
  .ssr .state em {
      margin-right: .066667rem;
  }
