@@ -1,105 +1,116 @@
  body {
-            min-width: 320px;
-            max-width: 750px;
-            width: 10rem;
-            margin: 0 auto;
-            line-height: 1.5;
-            font-family: Arial, Helvetica;
-            background: #f2f2f2;
-        }
-h3,
-h2 {
-    font-weight: normal;
-    }
+     min-width: 320px;
+     max-width: 750px;
+     width: 10rem;
+     margin: 0 auto;
+     line-height: 1.5;
+     font-family: Arial, Helvetica;
+     background: #f2f2f2;
+ }
 
-i {
+ h3,
+ h2 {
+     font-weight: normal;
+ }
+
+ i {
      font-style: normal;
-    }
+ }
 
-        h2 {
-            text-align: center;
-            color: #144a74;
-        }
+ h2 {
+     text-align: center;
+     color: #144a74;
+ }
 
-        p {
-            margin-left: .266667rem;
-            margin-right: .266667rem;
-        }
 
-      
+ .explain {
+     display: flex;
+     flex-direction: column;
 
-        .explain div>h3 {
-            font-size: 18px;
-            color: #10aec2;
-            margin-left: .266667rem;
-            margin-bottom: .16rem;
-        }
+ }
 
-        .explain :nth-child(2) {
-            background-color: #f9f4dc;
-        }
+ .explain i {
+     align-self: flex-end;
+     color: #baccd9;
+ }
 
-        .explain div :nth-child(2) {
-            font-size: 16px;
-            text-indent: 2em;
-            color: #ed556a;
-            margin-top: 0px;
-        }
 
-        .explain div .message {
-            text-align: center;
-            color: #2b73af;
-            line-height: 17px;
-            font-size: 15px;
-        }
+ .explain div>h3 {
+     font-size: 18px;
+     color: #10aec2;
+     margin-left: .266667rem;
+     margin-bottom: .16rem;
+ }
 
-        .ssr {
-            background-color: #e2e1e4;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            margin: 0 .133333rem 0 .133333rem;
-        }
-        .ssr div{
-            font-size: 13px;
-        }
+ .explain div :nth-child(2) {
+     background-color: #f9f4dc;
+ }
 
-        .ssr h2{
-            margin-bottom: 0;
-        }
-        .ssr em {
-            display: inline-block;
-            width: .266667rem;
-            height: .266667rem;
-            margin-left: .266667rem;
-            background-color: red;
-            border-radius: 50%;
-        }
-        .ssr em, 
-        .ssr i {
-            vertical-align: middle;
-        }
+ .explain div :nth-child(2) {
+     font-size: 16px;
+     text-indent: 2em;
+     color: #ed556a;
+     margin-top: 0px;
+ }
 
-        .ssr p {
-            margin-left: .666667rem;
-            margin-right: .533333rem;
-           
-        }
+ .explain div .message {
+     text-align: center;
+     color: #2b73af;
+     line-height: 17px;
+     font-size: 15px;
+ }
 
-        .ssr :nth-child(3) {
-            font-size: 13px;
-        }
+ .ssr {
+     background-color: #e2e1e4;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+     margin: 0 .133333rem 0 .133333rem;
+ }
 
-        .v2ray {
-            word-wrap: break-word;
-            word-break: break-all;
-           
-        }
+ .ssr div {
+     font-size: 13px;
+ }
 
-        .v2ray em {
-            background-color: rgb(8, 248, 8);
-        }
-        .v2ray .copy_btn i {
-            color: #10aec2;
-        }
+ .ssr h2 {
+     margin-bottom: 0;
+ }
+
+ .ssr em {
+     display: inline-block;
+     width: .266667rem;
+     height: .266667rem;
+     margin-left: .266667rem;
+     background-color: red;
+     border-radius: 50%;
+ }
+
+ .ssr em,
+ .ssr i {
+     vertical-align: middle;
+ }
+
+ .ssr p {
+     margin-left: .666667rem;
+     margin-right: .533333rem;
+
+ }
+
+ .ssr :nth-child(3) {
+     font-size: 13px;
+ }
+
+ .v2ray {
+     word-wrap: break-word;
+     word-break: break-all;
+
+ }
+
+ .v2ray em {
+     background-color: rgb(8, 248, 8);
+ }
+
+ .v2ray .copy_btn i {
+     color: #10aec2;
+ }
