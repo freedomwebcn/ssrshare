@@ -79,8 +79,8 @@
 
  .ssr em {
      display: inline-block;
-     width: .266667rem;
-     height: .266667rem;
+     width: 10px;
+     height: 10px;
      margin-left: .266667rem;
      background-color: red;
      border-radius: 50%;
