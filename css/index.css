@@ -81,6 +81,7 @@
      display: inline-block;
      width: .266667rem;
      height: .266667rem;
+     min-width:.266667rem;
      margin-left: .266667rem;
      background-color: red;
      border-radius: 50%;
