@@ -81,13 +81,12 @@
      display: inline-block;
      width: .266667rem;
      height: .266667rem;
-     min-width:.266667rem;
      margin-left: .266667rem;
      background-color: red;
      border-radius: 50%;
  }
 
- 
+
 
  .ssr p {
      margin-left: .666667rem;
@@ -96,13 +95,15 @@
  }
 
 
-  .ssr .state{
-      display: flex;
-      align-items: center;
-  }
-  .ssr .state em {
-      margin-right: .066667rem;
-  }
+ .ssr .state {
+     display: flex;
+     align-items: center;
+ }
+
+ .ssr .state em {
+     margin-right: .066667rem;
+ }
+
  .ssr :nth-child(3) {
      font-size: 13px;
  }
