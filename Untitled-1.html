@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>邀请码</p>
+    <p class="inviteCode" id="inviteCode">1211121</p>
+    <p class="copy"> 复制</p>
+
+
+    <script>
+        
+        $(".copy").click(function () {
+            copyText()
+
+            });
+
+        
+
+
+        function copyText() {
+                $("body").after("<input id='copyVal'></input>");
+                var text = document.getElementById("inviteCode").innerText;;
+                var input = document.getElementById("copyVal");
+                input.value = text;//修改文本框的内容
+                input.select();// 选中文本
+                document.execCommand("copy");//执行浏览器复制命令
+                $("#copyVal").remove();
+                alert("复制成功");
+            }
+           
+
+    </script>
+</body>
+
+</html>
