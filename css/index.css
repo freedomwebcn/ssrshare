@@ -82,6 +82,7 @@
      width: 10px;
      height: 10px;
      margin-left: .266667rem;
+     margin-right: .266667rem;
      background-color: red;
      border-radius: 50%;
  }
@@ -89,7 +90,7 @@
 
 
  .ssr p {
-     margin-left: .666667rem;
+     margin-left: .7196162046908316rem;
      margin-right: .533333rem;
 
  }
