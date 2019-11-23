@@ -86,10 +86,7 @@
      border-radius: 50%;
  }
 
- .ssr em,
- .ssr i {
-     vertical-align: middle;
- }
+ 
 
  .ssr p {
      margin-left: .666667rem;
@@ -97,6 +94,14 @@
 
  }
 
+
+  .ssr .state{
+      display: flex;
+      align-items: center;
+  }
+  .ssr .state em {
+      margin-right: .066667rem;
+  }
  .ssr :nth-child(3) {
      font-size: 13px;
  }
