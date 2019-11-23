@@ -81,6 +81,7 @@
      display: inline-block;
      width: 10px;
      height: 10px;
+     vertical-align: middle;
      margin-left: .266667rem;
      background-color: red;
      border-radius: 50%;
