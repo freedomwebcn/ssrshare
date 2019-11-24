@@ -2,6 +2,7 @@
      min-width: 320px;
      max-width: 750px;
      width: 10rem;
+    height: 20000px;
      margin: 0 auto;
      line-height: 1.5;
      font-family: Arial, Helvetica;
@@ -26,7 +27,6 @@
  .explain {
      display: flex;
      flex-direction: column;
-     margin: 0 .133333rem 0 .133333rem;
 
  }
 
@@ -40,7 +40,7 @@
  .explain div>h3 {
      font-size: 18px;
      color: #10aec2;
-     margin-left: .266667rem;
+     margin-left: .133333rem;
      margin-bottom: .16rem;
  }
 
@@ -50,6 +50,7 @@
      border-bottom-left-radius: 5px;
      border-bottom-right-radius: 5px;
      padding:.133333rem .133333rem .133333rem .133333rem;
+     margin: 0 .133333rem 0 .133333rem;
      background-color: #12aa9c;
  }
 
