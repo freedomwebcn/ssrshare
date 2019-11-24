@@ -2,7 +2,7 @@
      min-width: 320px;
      max-width: 750px;
      width: 10rem;
-     /* height: 20000px; */
+     height: 20000px;
      margin: 0 auto;
      line-height: 1.5;
      font-family: Arial, Helvetica;
@@ -144,4 +144,9 @@
 
  .v2ray .copy_btn i.copy {
      color: #10aec2;
+ }
+
+ .v2ray .copy_btn  img {
+    width: 100px;
+    height:100px;
  }
