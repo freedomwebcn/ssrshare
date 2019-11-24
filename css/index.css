@@ -22,6 +22,11 @@
      text-align: center;
      color: #144a74;
  }
+ hr{
+     background-color: #c7d2d4;
+     border: none;
+     height: .013333rem;
+ }
 
 
  .explain {
