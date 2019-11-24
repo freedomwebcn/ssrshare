@@ -141,7 +141,9 @@
  .v2ray em {
      background-color: rgb(8, 248, 8);
  }
-
+.v2ray .copy_btn{
+    text-align: center;
+}
  .v2ray .copy_btn i.copy {
      color: #10aec2;
  }
