@@ -8,7 +8,13 @@
      font-family: Arial, Helvetica;
      background: #f2f2f2;
  }
+/* 如果屏幕超过了 750px  就按照 750设计稿来走 不会让我们页面超过750px */
 
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 75px !important;
+    }
+}
  h3,
  h2 {
      font-weight: normal;
