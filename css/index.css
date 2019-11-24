@@ -2,19 +2,21 @@
      min-width: 320px;
      max-width: 750px;
      width: 10rem;
-    /* height: 20000px; */
+     /* height: 20000px; */
      margin: 0 auto;
      line-height: 1.5;
      font-family: Arial, Helvetica;
      background: #f2f2f2;
  }
-/* 如果屏幕超过了 750px  就按照 750设计稿来走 不会让我们页面超过750px */
 
-@media screen and (min-width: 750px) {
-    html {
-        font-size: 75px !important;
-    }
-}
+ /* 如果屏幕超过了 750px  就按照 750设计稿来走 不会让我们页面超过750px */
+
+ @media screen and (min-width: 750px) {
+     html {
+         font-size: 75px !important;
+     }
+ }
+
  h3,
  h2 {
      font-weight: normal;
@@ -28,7 +30,8 @@
      text-align: center;
      color: #144a74;
  }
- hr{
+
+ hr {
      background-color: #c7d2d4;
      border: none;
      width: 100%;
@@ -49,7 +52,6 @@
      margin-right: .133333rem;
  }
 
-
  .explain div>h3 {
      font-size: 18px;
      color: #10aec2;
@@ -57,12 +59,16 @@
      margin-bottom: .16rem;
  }
 
- .explain div :nth-child(2) {
+ .explain div :nth-child(2),
+ .ssr {
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
      border-bottom-left-radius: 5px;
      border-bottom-right-radius: 5px;
-     padding:.133333rem .133333rem .133333rem .133333rem;
+ }
+
+ .explain div :nth-child(2) {
+     padding: .133333rem .133333rem .133333rem .133333rem;
      margin: 0 .133333rem 0 .133333rem;
      background-color: #12aa9c;
  }
@@ -83,10 +89,6 @@
 
  .ssr {
      background-color: #e2e1e4;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
-     border-bottom-left-radius: 5px;
-     border-bottom-right-radius: 5px;
      margin: 0 .133333rem 0 .133333rem;
  }
 
@@ -102,24 +104,23 @@
      display: inline-block;
      width: 10px;
      height: 10px;
-     margin-left: .266667rem;
-     margin-right: .266667rem;
+     margin: 0 .266667rem 0 .266667rem;
      background-color: red;
      border-radius: 50%;
  }
-
-
-
  .ssr p {
-     margin-left: .7196162046908316rem;
-     margin-right: .533333rem;
-
+     padding:0 .266667rem 0 .266667rem;
+     margin-top: 0;
+     line-height: 20px;
  }
 
-
- 
- .ssr .state em {
-     margin-right: .066667rem;
+ .ssr p::before {
+     content: '';
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     background-color: red;
+     border-radius: 50%;
  }
 
  .ssr :nth-child(3) {
@@ -132,10 +133,15 @@
 
  }
 
+ .v2ray p::before {
+     background-color: rgb(8, 248, 8);
+
+ }
+
  .v2ray em {
      background-color: rgb(8, 248, 8);
  }
 
- .v2ray .copy_btn i {
+ .v2ray .copy_btn i.copy {
      color: #10aec2;
  }
