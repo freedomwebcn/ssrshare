@@ -30,6 +30,6 @@ function move() {
     }
     $Ul[0].style.left = $Ul[0].offsetLeft + speed + 'px';
 }
-let timer = setInterval(move, 20); //全局变量 ，保存返回的定时器
+let timer = setInterval(move, 30); //全局变量 ，保存返回的定时器
 
 
