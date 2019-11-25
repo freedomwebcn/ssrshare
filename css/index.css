@@ -2,7 +2,7 @@
      min-width: 320px;
      max-width: 750px;
      width: 10rem;
-     height: 20000px;
+     /* height: 20000px; */
      margin: 0 auto;
      line-height: 1.5;
      font-family: Arial, Helvetica;
@@ -89,6 +89,7 @@
 
  .ssr {
      background-color: #e2e1e4;
+     text-align: center;
      margin: 0 .133333rem 0 .133333rem;
  }
 

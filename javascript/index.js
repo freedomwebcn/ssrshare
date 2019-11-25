@@ -31,15 +31,5 @@ function move() {
     $Ul[0].style.left = $Ul[0].offsetLeft + speed + 'px';
 }
 let timer = setInterval(move, 30); //全局变量 ，保存返回的定时器
-//移入清除定时器
 
-$footer.mouseenter(function () {
-clearInterval(timer)
-})
-
-//离开设定时器
-
-$footer.mouseleave(function () {
-    timer = setInterval(move, 30)
-})
 
