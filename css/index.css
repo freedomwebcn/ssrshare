@@ -2,7 +2,7 @@
      min-width: 320px;
      max-width: 750px;
      width: 10rem;
-     /* height: 20000px; */
+     height: 20000px;
      margin: 0 auto;
      line-height: 1.5;
      font-family: Arial, Helvetica;
@@ -161,11 +161,40 @@
 
  .footer {
      color: white;
+     height: 2.1321961620469rem;
      margin-left: .133333rem;
      margin-right: .133333rem;
-     text-align: center;
+     overflow: hidden;
      border-bottom-left-radius: 5px;
      border-bottom-right-radius: 5px;
      margin-bottom: .133333rem;
      background-image: linear-gradient(rgb(0, 136, 222), rgb(1, 93, 194));
+     position: relative;
  }
+ .footer ul {
+     padding-left: 0;
+     display: flex;
+     flex-wrap: nowrap;
+     align-items: center;
+     height: 100%;
+     overflow: hidden;
+     margin: 0;
+     position: absolute;
+     left: 0;
+ }
+
+
+ .footer ul li {
+     width: 1.718120805rem;
+     height: 1.718120805rem;
+     display: flex;
+     align-items: center;
+     list-style: none;
+     margin-right: 10px;
+     border-radius: 50%;
+ }
+ .footer ul img{
+    width: 100%;
+     width: 100%;
+ }
+
