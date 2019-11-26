@@ -54,7 +54,8 @@ $(document).ready(function () {
                 left = 0;
                 $Box_ul.css("left", left)
             } else {
-                $Box_ul.css("left", left)
+                    $Box_ul[0].style.transform = 'translateX(' + left + 'px)';
+               // $Box_ul.css("left", left)
             }
             timer = requestAnimationFrame(Tmove);
         }
@@ -65,13 +66,18 @@ $(document).ready(function () {
 
         window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
 
-        $Box_ul.hover(function () {
-            cancelAnimationFrame(timer)
-        }, function () {
-            if (allLiWidth >= $Box.width()) { //如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
-                Tmove();
-            }
-        })
+       
+       
+        /*
+         $Box_ul.hover(function () {
+             cancelAnimationFrame(timer)
+         }, function () {
+             if (allLiWidth >= $Box.width()) { //如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
+                 Tmove();
+             }
+         })
+        */
+       
 
     }
 })
