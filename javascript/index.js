@@ -10,8 +10,9 @@ function copyText() {
     input.focus();
     input.setSelectionRange(0, -1);// 选中文本
     document.execCommand("copy"); //执行浏览器复制命令
-    alert("复制成功");
+ 
     $("#copyVal").remove();
+       alert("复制成功");
 
 }
 
