@@ -1,12 +1,13 @@
 
-$('.aa').click(function () {
-    $('.copy').css({
-        'color':'red'
-    })
+$('.copy_btn_change_color').click(function () {
+
+     copyText($(this).children())
+
     // copyText(this)
 })
 
-function copyText(_that) {
+function copyText(_children) {
+    console.log(_children)
     $("body").after("<input id='copyVal' readonly='readonly'></input>")
     var text = document.getElementById("copy_text").innerText;;
     var input = document.getElementById("copyVal");
@@ -16,13 +17,13 @@ function copyText(_that) {
     if (document.execCommand("copy")) {
         //执行浏览器复制命令
         document.execCommand("copy")
-        $(_that).text('复制成功')
-        $(_that).css({
+        _children.text('复制成功')
+        _children.css({
             'color': 'red'
         })
         setTimeout(function () {
-            $(_that).text('点击复制')
-            $(_that).css({
+            _children.text('点击复制')
+           _children.css({
                 'color': ''
             })
         }, 3000)
