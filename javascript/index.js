@@ -3,7 +3,7 @@ $(".copy").click(function () {
 });
 
 function copyText() {
-    $("body").after("<input id='copyVal'></input>");
+    $("body").after("<input id='copyVal' readonly='readonly'></input>");
     var text = document.getElementById("copy_text").innerText;;
     var input = document.getElementById("copyVal");
     input.value = text; //修改文本框的内容
