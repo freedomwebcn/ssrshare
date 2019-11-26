@@ -55,7 +55,6 @@ $(document).ready(function () {
                 $Box_ul.css("left", left)
             } else {
                     $Box_ul[0].style.transform = 'translateX(' + left + 'px)';
-               // $Box_ul.css("left", left)
             }
             timer = requestAnimationFrame(Tmove);
         }

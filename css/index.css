@@ -6,7 +6,21 @@
      margin: 0 auto;
      line-height: 1.5;
      font-family: Arial, Helvetica;
-     background: #f2f2f2;
+     /* background: #f2f2f2; */
+     background-color: rgb(240, 242, 248)
+ }
+
+ /* 字体声明 */
+ @font-face {
+     font-family: 'icomoon';
+     src: url('../fonts/icomoon.eot?p4ssmb');
+     src: url('../fonts/icomoon.eot?p4ssmb#iefix') format('embedded-opentype'),
+         url('../fonts/icomoon.ttf?p4ssmb') format('truetype'),
+         url('../fonts/icomoon.woff?p4ssmb') format('woff'),
+         url('../fonts/icomoon.svg?p4ssmb#icomoon') format('svg');
+     font-weight: normal;
+     font-style: normal;
+     font-display: block;
  }
 
  /* 如果屏幕超过了 750px  就按照 750设计稿来走 不会让我们页面超过750px */
@@ -35,7 +49,8 @@
      background-color: #c7d2d4;
      border: none;
      width: 100%;
-     margin-bottom: 0;
+
+     margin: 0;
      height: 1px;
  }
 
@@ -44,6 +59,36 @@
      display: flex;
      flex-direction: column;
 
+ }
+ .explain :nth-child(3){
+
+    margin-top: .133333rem;
+ }
+
+ .explain span {
+     font-family: 'icomoon';
+     color: rgb(152, 158, 180) !important;
+
+ }
+
+ .explain div.notice h5 {
+     margin: 0;
+     margin-top: 0.2132196162rem;
+
+ }
+
+ .explain div.notice {
+     display: flex;
+     flex-wrap: wrap;
+ }
+  .explain div.notice hr {
+     background-color: rgb(229, 229, 229);
+
+  }
+
+ 
+ .explain div div.notice_content {
+     text-indent: 1.2em;
  }
 
  .explain i {
@@ -59,7 +104,7 @@
      margin-bottom: .16rem;
  }
 
- .explain div :nth-child(2),
+ .explain div :nth-child(1),
  .ssr {
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
@@ -67,16 +112,15 @@
      border-bottom-right-radius: 5px;
  }
 
- .explain div :nth-child(2) {
+ .explain div :nth-child(1) {
      padding: .133333rem .133333rem .133333rem .133333rem;
      margin: 0 .133333rem 0 .133333rem;
-     background-color: #12aa9c;
+     background-color: rgb(255, 255, 255);
  }
 
- .explain div :nth-child(2) {
+ .explain div :nth-child(1) {
      font-size: 16px;
-     text-indent: 2em;
-     color: white;
+     color: black;
      margin-top: 0px;
  }
 
