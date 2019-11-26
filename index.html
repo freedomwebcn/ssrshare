@@ -9,7 +9,7 @@
     <title>茶馆</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="javascript/flexible.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="./javascript/clipboard.js-master/clipboard.min.js"></script>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -18,6 +18,8 @@
 
     <div class="explain">
         <div class="header">
+                <textarea id="input"></textarea>
+
             <h2>茶馆</h2>
             <i>活在旧社会，死在新时代</i>
         </div>
@@ -74,14 +76,16 @@
     <div class="v2ray ssr">
         <h2>V2ray链接</h2>
         <div>
-            <p id="copy_text" style="display:none">
+            <p id="copy_text" style="opacity:0;text-indent: -9999em;z-index:-1;height:1px;margin:0;padding:0;">
                 vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIm1laWp1eXVhbi50b3AiLA0KICAiYWRkIjogIm1laWp1eXVhbi50b3AiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiN2M2ZDU1NGUtYWQ2My00NTU4LTllNzMtYTNhZTliYjJhNjhlIiwNCiAgImFpZCI6ICIyMzMiLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogIm1laWp1eXVhbi50b3AiLA0KICAicGF0aCI6ICIvIiwNCiAgInRscyI6ICJ0bHMiDQp9
             </p>
+
             <p class="copy_btn">
                 <i>状态: 可用</i>
                 <br>
                 V2ray链接:
-                <a href="javascript:;" class="copy_btn_change_color">
+                <a href="javascript:;" class="copy_btn_change_color" id="copy_btn_change_color"
+                    data-clipboard-target='#input' data-clipboard-action="copy">
                     <i class="copy">点击复制</i>
                 </a>
                 <br>
@@ -97,7 +101,7 @@
 
     <div class="footer">
         <a href="https://jq.qq.com/?_wv=1027&k=5AWDEuY">点击加群交流</a>
-2.6
+        2.8
     </div>
 
     <script src="./javascript/index.js"></script>

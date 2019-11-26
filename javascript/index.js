@@ -1,23 +1,23 @@
-$('.copy_btn_change_color').click(function () {
+$(".copy_btn_change_color").click(function () {
+    let e = document.getElementById("copy_text").innerText;
+    let t = document.getElementById("input");
+    t.value = e;
+    //实例化clipboard
+    var clipboard = new ClipboardJS('#copy_btn_change_color');
+    clipboard.on("success", function (e) {
+        $(".alertMsg").html("复制成功！");
+        $(".modal-bg").css("display", "block");
+        e.clearSelection();
+    });
+    clipboard.on("error", function (e) {
+        $(".alertMsg").html("请选择“拷贝”进行复制!");
+        $(".modal-bg").css("display", "block");
+    });
+});
 
-    copyText($(this).children())
 
-    // copyText(this)
-})
 
-function copyText(_children) {
 
-    $("body").after("<input id='copyVal'></input>")
-    var text = document.getElementById("copy_text").innerText;;
-    var input = document.getElementById("copyVal");
-    input.value = text; //修改文本框的内容
-    input.focus();
-    input.setSelectionRange(0, -1); // 选中文本
-    document.execCommand("copy")
-    _children.text('复制成功')
-    $("#copyVal").remove();
-
-}
 
 
 

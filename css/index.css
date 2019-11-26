@@ -294,7 +294,11 @@ a{
      color: #fff;
      text-decoration: none !important;
  }
- #copy_tips{
+ #input{
+     opacity: 0;
+     z-index: -1;
+     height: 1px;
     
-
+     padding: 0;
+     border:0;
  }
