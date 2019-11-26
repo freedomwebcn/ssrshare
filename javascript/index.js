@@ -26,7 +26,7 @@ onload = reurl;
 /* 有的浏览器第一次加载不会动画  刷新当前页面一次 */
 
 $(document).ready(function () {
-    var box0 = $(".footer"),
+    var box0 = $(".loop_img"),
         v0 = 0.6; //这里添加滚动的对象和其速率
     Rin(box0, v0);
 
@@ -48,14 +48,14 @@ $(document).ready(function () {
         }
 
         function Tmove() {
-            //运动是移动left 从0到-s;（个人习惯往左滚）
+            //运动是移动left 从0到-s;
             left -= v;
             if (left <= -allLiWidth) {
                 left = 0;
                 //$Box_ul.css("left", left)
-                  $Box_ul[0].style.webkitTransform = 'translateX(' + left + 'px)';
+                $Box_ul[0].style.webkitTransform = 'translateX(' + left + 'px)';
             } else {
-                    $Box_ul[0].style.webkitTransform = 'translateX(' + left + 'px)';
+                $Box_ul[0].style.webkitTransform = 'translateX(' + left + 'px)';
             }
             timer = requestAnimationFrame(Tmove);
         }
@@ -66,8 +66,8 @@ $(document).ready(function () {
 
         window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
 
-       
-       
+
+
         /*
          $Box_ul.hover(function () {
              cancelAnimationFrame(timer)
@@ -77,7 +77,7 @@ $(document).ready(function () {
              }
          })
         */
-       
+
 
     }
 })
