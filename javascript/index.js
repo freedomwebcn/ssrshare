@@ -8,9 +8,11 @@ function copyText() {
     var input = document.getElementById("copyVal");
     input.value = text; //修改文本框的内容
     input.focus();
-    input.setSelectionRange(0, -1);// 选中文本
-    document.execCommand("copy"); //执行浏览器复制命令
-    alert("复制成功");
+    input.select(); // 选中文本
+    if (document.execCommand("copy")) {
+        //执行浏览器复制命令
+        alert("复制成功");
+    }
     $("#copyVal").remove();
 
 }
