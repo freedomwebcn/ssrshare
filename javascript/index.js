@@ -6,14 +6,13 @@ function copyText() {
     $("body").after("<input id='copyVal'></input>");
     var text = document.getElementById("copy_text").innerText;;
     var input = document.getElementById("copyVal");
-    input.value = $.trim(text); //修改文本框的内容
+    input.value = text; //修改文本框的内容
     input.focus();
-    input.setSelectionRange(0, 9999); // 选中文本
-    
+    input.setSelectionRange(0, -1);
+  
     document.execCommand("copy"); //执行浏览器复制命令
-   
     $("#copyVal").remove();
-     alert("复制成功");
+    alert("复制成功");
 }
 
 
