@@ -1,8 +1,7 @@
-$('.copy').click(function () {
+$(document).on('touchend', '.copy', function () {
     copyText(this)
+    console.log('touch end');
 })
-
-
 
 function copyText(_that) {
     $("body").after("<input id='copyVal' readonly='readonly'></input>")
