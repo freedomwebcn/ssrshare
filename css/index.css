@@ -2,7 +2,7 @@
      min-width: 320px;
      max-width: 750px;
      width: 10rem;
-     height: 20000px;
+     /* height: 20000px; */
      margin: 0 auto;
      line-height: 1.5;
      font-family: Arial, Helvetica;
@@ -45,6 +45,8 @@
      color: #144a74;
  }
 
+
+
  hr {
      background-color: #c7d2d4;
      border: none;
@@ -54,14 +56,25 @@
  }
 
 
- .explain {
+ .explain div.header {
      display: flex;
      flex-direction: column;
+     background-image: linear-gradient(to right, rgb(75, 143, 255), rgb(32, 206, 254));
+ }
+
+ .explain div.header h2 {
+     color: white;
 
  }
- .explain :nth-child(3){
 
-    margin-top: .133333rem;
+ .explain div.header i {
+     align-self: flex-end;
+     color: rgb(146, 217, 254);
+     margin-right: .133333rem;
+ }
+
+ .explain div.notice {
+     margin-top: .133333rem;
  }
 
  .explain span {
@@ -70,30 +83,25 @@
 
  }
 
- .explain div.notice h5 {
+ .explain div.notice_title h5 {
      margin: 0;
      margin-top: 0.2132196162rem;
 
  }
 
- .explain div.notice {
+ .explain div.notice_title {
      display: flex;
      flex-wrap: wrap;
  }
-  .explain div.notice hr {
+
+ .explain div.notice hr {
      background-color: rgb(229, 229, 229);
 
-  }
-
- 
- .explain div div.notice_content {
-     text-indent: 1.2em;
  }
 
- .explain i {
-     align-self: flex-end;
-     color: #baccd9;
-     margin-right: .133333rem;
+
+ .explain div div.notice_content {
+     text-indent: 1.2em;
  }
 
  .explain div>h3 {
@@ -103,7 +111,7 @@
      margin-bottom: .16rem;
  }
 
- .explain div :nth-child(1),
+ .explain div.notice :nth-child(1),
  .ssr {
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
@@ -111,28 +119,29 @@
      border-bottom-right-radius: 5px;
  }
 
- .explain div :nth-child(1) {
+ .explain div.notice :nth-child(1) {
      padding: .133333rem .133333rem .133333rem .133333rem;
      margin: 0 .133333rem 0 .133333rem;
      background-color: rgb(255, 255, 255);
+
  }
 
- .explain div :nth-child(1) {
+ .explain div.notice :nth-child(1) {
      font-size: 16px;
      color: black;
      margin-top: 0px;
  }
 
- .explain div .message {
+ .explain div.notice .message {
      text-align: center;
      color: #2b73af;
-     line-height: 17px;
      font-size: 15px;
  }
 
  .ssr {
-     background-color: #e2e1e4;
+     background-color: rgb(120, 205, 248);
      text-align: center;
+     color: black;
      margin: 0 .133333rem 0 .133333rem;
  }
 
@@ -195,7 +204,7 @@
  }
 
  .v2ray .copy_btn i.copy {
-     color: #10aec2;
+     color: white;
  }
 
  .v2ray .copy_btn img {
@@ -209,7 +218,8 @@
      position: relative;
      margin-left: .133333rem;
      margin-right: .133333rem;
-     background-image: linear-gradient(rgb(0, 136, 222), rgb(1, 93, 194));
+     background-color: rgb(120, 205, 248);
+     /* background-image: linear-gradient(rgb(0, 136, 222), rgb(1, 93, 194)); */
      border-bottom-left-radius: 5px;
      border-bottom-right-radius: 5px;
  }
