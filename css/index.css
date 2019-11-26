@@ -191,6 +191,10 @@
      border-radius: 50%;
  }
 
+  .ssr p i {
+  margin-left: 3px;
+  }
+
  .ssr :nth-child(3) {
      font-size: 13px;
  }
