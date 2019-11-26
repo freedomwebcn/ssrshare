@@ -1,9 +1,8 @@
+$("body>*").bind("click", function () {});
 
-
-$(document).on('click touchstart', '.copy', function () {
-       copyText(this)
-     console.log('box被点击了！！！');
- })
+$('.copy').click(function () {
+    copyText(this)
+})
 
 function copyText(_that) {
     $("body").after("<input id='copyVal' readonly='readonly'></input>")
