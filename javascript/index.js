@@ -52,9 +52,10 @@ $(document).ready(function () {
             left -= v;
             if (left <= -allLiWidth) {
                 left = 0;
-                $Box_ul.css("left", left)
+                //$Box_ul.css("left", left)
+                  $Box_ul[0].style.webkitTransform = 'translateX(' + left + 'px)';
             } else {
-                    $Box_ul[0].style.transform = 'translateX(' + left + 'px)';
+                    $Box_ul[0].style.webkitTransform = 'translateX(' + left + 'px)';
             }
             timer = requestAnimationFrame(Tmove);
         }
