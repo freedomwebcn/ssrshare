@@ -156,6 +156,7 @@
      background-image: linear-gradient(to right, rgb(208, 243, 247), rgb(145, 248, 248));
      text-align: center;
      color: black;
+   
      margin: 0 .133333rem 0 .133333rem;
  }
 
@@ -179,7 +180,7 @@
  .ssr p {
      padding: 0 .266667rem 0 .266667rem;
      margin-top: 0;
-     line-height: 20px;
+     line-height: 23px;
  }
 
  .ssr p::before {
