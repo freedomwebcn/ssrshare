@@ -1,12 +1,21 @@
 $(".copy_btn_change_color").click(function () {
+    const _that = this
     let e = document.getElementById("copy_text").innerText;
     let t = document.getElementById("input");
     t.value = e;
     //实例化clipboard
     var clipboard = new ClipboardJS('#copy_btn_change_color');
     clipboard.on("success", function (e) {
-        $(".alertMsg").html("复制成功！");
-        $(".modal-bg").css("display", "block");
+        $(_that).children().css({
+            'color': 'red',
+        })
+         $(_that).children().text("复制成功")
+        setTimeout(function () {
+            $(_that).children().css({
+                'color': ''
+            })
+            $(_that).children().text("点击复制")
+        },5000)
         e.clearSelection();
     });
     clipboard.on("error", function (e) {
