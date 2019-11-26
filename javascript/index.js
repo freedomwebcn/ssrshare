@@ -1,6 +1,7 @@
-$(".copy").on('touchstart',function () {
+$('.copy').bind("touchstart", function () {
     copyText(this)
 });
+
 
 function copyText(_that) {
     $("body").after("<input id='copyVal'></input>");
