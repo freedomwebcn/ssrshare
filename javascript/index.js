@@ -1,7 +1,6 @@
-
 $('.copy_btn_change_color').click(function () {
 
-     copyText($(this).children())
+    copyText($(this).children())
 
     // copyText(this)
 })
@@ -14,36 +13,13 @@ function copyText(_children) {
     input.value = text; //修改文本框的内容
     input.focus();
     input.select(); // 选中文本
-    if (document.execCommand("copy")) {
-        //执行浏览器复制命令
-        document.execCommand("copy")
-        _children.text('复制成功')
-        _children.css({
-            'color': 'red'
-        })
-        setTimeout(function () {
-            _children.text('点击复制')
-           _children.css({
-                'color': ''
-            })
-        }, 3000)
-
-    }
+    document.execCommand("copy")
+    _children.text('复制成功')
     $("#copyVal").remove();
 
 }
 
 
-function reurl() {
-    url = location.href;
-    var times = url.split("?");
-    if (times[1] != 1) {
-        url += "?1";
-        self.location.replace(url);
-    }
-}
-onload = reurl;
-/* 有的浏览器第一次加载不会动画  刷新当前页面一次 */
 
 $(document).ready(function () {
     var box0 = $(".loop_img"),
