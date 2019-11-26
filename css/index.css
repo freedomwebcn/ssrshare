@@ -203,6 +203,7 @@
      word-wrap: break-word;
      word-break: break-all;
      color: black;
+      margin-bottom: 0.39978678rem;
      /* background-color: rgb(120, 205, 248); */
      background-image: linear-gradient(to right, rgb(242, 217, 247), rgb(179, 146, 252));
      border-bottom-left-radius: 0px !important;
@@ -215,9 +216,7 @@
 
  }
 
- .v2ray em {
-     background-color: rgb(8, 248, 8);
- }
+ 
 
  .v2ray .copy_btn {
      text-align: center;
