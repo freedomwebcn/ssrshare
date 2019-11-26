@@ -14,22 +14,64 @@ function copyText() {
 }
 
 
-const $footer = $(".footer");
-const $Ul = $('.footer ul');
-const speed = -2; //初始化速度
-console.log($Ul[0].innerHTML)
-$Ul[0].innerHTML += $Ul[0].innerHTML;
-//$Ul.append($Ul.html()); //图片内容*2
-
-const $Li = $(".footer ul li");
-
-$Ul.width($Li.length * 64)//设置ul的宽度使图片可以放下
-function move() {
-    if ($Ul[0].offsetLeft < -($Ul[0].offsetWidth / 2)) { //向左滚动，当靠左的图4移出边框时
-        $Ul[0].style.left = 0;
+function reurl() {
+    url = location.href;
+    var times = url.split("?");
+    if (times[1] != 1) {
+        url += "?1";
+        self.location.replace(url);
     }
-    $Ul[0].style.left = $Ul[0].offsetLeft + speed + 'px';
 }
-let timer = setInterval(move, 30); //全局变量 ，保存返回的定时器
+onload = reurl;
+/* 有的浏览器第一次加载不会动画  刷新当前页面一次 */
 
+$(document).ready(function () {
+    var box0 = $(".footer"),
+        v0 = 0.6; //这里添加滚动的对象和其速率
+    Rin(box0, v0);
 
+    function Rin($Box, v) { //$Box移动的对象，v对象移动的速率
+        var $Box_ul = $Box.find("ul"),
+            $Box_li = $Box_ul.find("li"),
+            left = 0,
+            allLiWidth = 0,
+            timer; //定时器
+
+        $Box_li.each(function (index) {
+            allLiWidth += $(this).outerWidth(true); //即要滚动的长度
+            console.log(allLiWidth)
+        })
+
+        if (allLiWidth >= $Box.width()) { //如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
+            $Box_li.clone(true).appendTo($Box_ul);
+            Tmove();
+        }
+
+        function Tmove() {
+            //运动是移动left 从0到-s;（个人习惯往左滚）
+            left -= v;
+            if (left <= -allLiWidth) {
+                left = 0;
+                $Box_ul.css("left", left)
+            } else {
+                $Box_ul.css("left", left)
+            }
+            timer = requestAnimationFrame(Tmove);
+        }
+
+        window.requestAnimationFrame = window.requestAnimationFrame || function (Tmove) {
+            return setTimeout(Tmove, 1000 / 60)
+        };
+
+        window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
+
+        $Box_ul.hover(function () {
+            cancelAnimationFrame(timer)
+        }, function () {
+            if (allLiWidth >= $Box.width()) { //如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
+                Tmove();
+            }
+        })
+
+    }
+})
