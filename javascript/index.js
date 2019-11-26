@@ -11,6 +11,7 @@ function copyText(_that) {
     input.select(); // 选中文本
     if (document.execCommand("copy")) {
         //执行浏览器复制命令
+        document.execCommand("copy")
         $(_that).text('复制成功')
         $(_that).css({
             'color': 'red'

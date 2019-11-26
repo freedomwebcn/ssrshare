@@ -225,6 +225,7 @@
 
  .v2ray .copy_btn i.copy {
      color: white;
+     cursor: pointer;
  }
 
  .v2ray .copy_btn img {
