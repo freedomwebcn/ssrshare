@@ -1,7 +1,9 @@
-$("body>*").bind("click", function () {});
 
-$('.copy').click(function () {
-    copyText(this)
+$('.aa').click(function () {
+    $('.copy').css({
+        'color':'red'
+    })
+    // copyText(this)
 })
 
 function copyText(_that) {
