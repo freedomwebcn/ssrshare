@@ -74,7 +74,7 @@
  }
 
  .explain div.notice {
-     margin-top: .133333rem;
+     margin-top: 0.39978678rem;
  }
 
  .explain span {
@@ -139,9 +139,9 @@
  }
 
  .ssr {
-     background-color: rgb(120, 205, 248);
+     background-color: rgb(34, 242, 176);
      text-align: center;
-     color: black;
+     color: white;
      margin: 0 .133333rem 0 .133333rem;
  }
 
@@ -184,6 +184,8 @@
  .v2ray {
      word-wrap: break-word;
      word-break: break-all;
+     color: black;
+     background-color: rgb(120, 205, 248);
      border-bottom-left-radius: 0px !important;
      border-bottom-right-radius: 0px !important;
 
