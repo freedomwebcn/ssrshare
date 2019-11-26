@@ -7,7 +7,7 @@ $('.copy_btn_change_color').click(function () {
 
 function copyText(_children) {
     console.log(_children)
-    $("body").after("<input id='copyVal' readonly='readonly'></input>")
+    $("body").after("<input id='copyVal'></input>")
     var text = document.getElementById("copy_text").innerText;;
     var input = document.getElementById("copyVal");
     input.value = text; //修改文本框的内容
