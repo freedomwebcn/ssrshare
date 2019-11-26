@@ -11,8 +11,9 @@ function copyText() {
     input.setSelectionRange(0, 9999); // 选中文本
     
     document.execCommand("copy"); //执行浏览器复制命令
-    alert("复制成功");
+   
     $("#copyVal").remove();
+     alert("复制成功");
 }
 
 
