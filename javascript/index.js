@@ -1,8 +1,8 @@
 $(".copy").click(function () {
-    copyText()
+    copyText(this)
 });
 
-function copyText() {
+function copyText(_that) {
     $("body").after("<input id='copyVal'></input>");
     var text = document.getElementById("copy_text").innerText;;
     var input = document.getElementById("copyVal");
@@ -11,7 +11,17 @@ function copyText() {
     input.select(); // 选中文本
     if (document.execCommand("copy")) {
         //执行浏览器复制命令
-        alert("复制成功");
+        $(_that).text('复制成功')
+        $(_that).css({
+            'color': 'red'
+        })
+        setTimeout(function () {
+            $(_that).text('点击复制')
+            $(_that).css({
+                'color': ''
+            })
+        }, 3000)
+
     }
     $("#copyVal").remove();
 
