@@ -1,4 +1,4 @@
-$(".copy").click(function () {
+$(".copy").on('touchstart',function () {
     copyText(this)
 });
 
