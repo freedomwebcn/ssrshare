@@ -18,7 +18,7 @@
 
     <div class="explain">
         <div class="header">
-                <textarea id="input"></textarea>
+            <textarea id="input"></textarea>
 
             <h2>茶馆</h2>
             <i>活在旧社会，死在新时代</i>
@@ -53,40 +53,42 @@
         <hr>
     </div>
 
-    <div class="ssr">
+    <div class="ssr same_css set_QR">
         <h2>SSR链接</h2>
         <div>
-
-            <p>
-                <i>状态: 不可用</i>
-                <br>
-                故障描述: 目前GFW(防火墙)检测力度加大,使用SSR会出现断流(时而有网,时而没网)的情况
-                <br>
-                SSR链接: 暂无
-                <br>
-                SSR二维码: 暂无
-                <br>
-                请使用V2ray链接翻墙
-            </p>
-
-        </div>
-
-    </div>
-
-    <div class="v2ray ssr">
-        <h2>V2ray链接</h2>
-        <div>
-            <p id="copy_text" style="opacity:0;text-indent: -9999em;z-index:-1;height:1px;margin:0;padding:0;">
-                vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIm1laWp1eXVhbi50b3AiLA0KICAiYWRkIjogIm1laWp1eXVhbi50b3AiLA0KICAicG9ydCI6ICI0NDMiLA0KICAiaWQiOiAiN2M2ZDU1NGUtYWQ2My00NTU4LTllNzMtYTNhZTliYjJhNjhlIiwNCiAgImFpZCI6ICIyMzMiLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogIm1laWp1eXVhbi50b3AiLA0KICAicGF0aCI6ICIvIiwNCiAgInRscyI6ICJ0bHMiDQp9
-            </p>
+            <p id="copy_text" style="opacity:0;text-indent: -9999em;z-index:-1;height:1px;margin:0;padding:0;">ssr://MTM5LjE4MC4yMTIuMTYxOjIzNjY1OmF1dGhfc2hhMV92NDphZXMtMjU2LWNmYjpwbGFpbjpjWGRsY25SNWRXbHZjRzF1WW5abmFpNTBZZw</p>
 
             <p class="copy_btn">
                 <i>状态: 可用</i>
                 <br>
-                V2ray链接:
+                SSR链接:
                 <a href="javascript:;" class="copy_btn_change_color" id="copy_btn_change_color"
                     data-clipboard-target='#input' data-clipboard-action="copy">
                     <i class="copy">点击复制</i>
+                </a>
+                <br>
+                SSR二维码:
+                <br>
+                <img src="./images/18.png" alt="">
+                <br>
+                更新时间：2019/11/27
+            </p>
+        </div>
+     
+
+    </div>
+
+    <div class="v2ray ssr same_css set_QR">
+        <h2>V2ray链接</h2>
+        <div>
+        
+
+            <p class="copy_btn">
+                <i>状态: 不可用</i>
+                <br>
+                V2ray链接:
+                <a href="javascript:;">
+                    <i class="copy">暂无</i>
                 </a>
                 <br>
                 V2ray二维码:
@@ -96,12 +98,15 @@
                 更新时间：2019/11/24
             </p>
         </div>
+        <div class="msk">
+            <img src="./images/map.png" class='msk_img' alt="">
+        </div>
 
     </div>
 
     <div class="footer">
         <a href="https://jq.qq.com/?_wv=1027&k=5AWDEuY">点击加群交流</a>
-        
+
     </div>
 
     <script src="./javascript/index.js"></script>
