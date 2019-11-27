@@ -23,16 +23,8 @@ $(".copy_btn_change_color").click(function () {
             'color': 'red',
         })
         $(_that).children().text("复制失败")
-
     });
 });
-
-
-
-
-
-
-
 $(document).ready(function () {
     var box0 = $(".loop_img"),
         v0 = 0.6; //这里添加滚动的对象和其速率
@@ -44,17 +36,14 @@ $(document).ready(function () {
             left = 0,
             allLiWidth = 0,
             timer; //定时器
-
         $Box_li.each(function (index) {
             allLiWidth += $(this).outerWidth(true); //即要滚动的长度
             console.log(allLiWidth)
         })
-
         if (allLiWidth >= $Box.width()) { //如果滚动长度超出Box长度即开始滚动，没有的话就不执行滚动
             $Box_li.clone(true).appendTo($Box_ul);
             Tmove();
         }
-
         function Tmove() {
             //运动是移动left 从0到-s;
             left -= v;
@@ -67,15 +56,10 @@ $(document).ready(function () {
             }
             timer = requestAnimationFrame(Tmove);
         }
-
         window.requestAnimationFrame = window.requestAnimationFrame || function (Tmove) {
             return setTimeout(Tmove, 1000 / 60)
         };
-
         window.cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
-
-
-
         /*
          $Box_ul.hover(function () {
              cancelAnimationFrame(timer)
