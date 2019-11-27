@@ -18,10 +18,10 @@ $(".copy_btn_change_color").click(function () {
         },5000)
         e.clearSelection();
     });
-    clipboard.on("error", function (e) {
-        $(".alertMsg").html("请选择“拷贝”进行复制!");
-        $(".modal-bg").css("display", "block");
-    });
+   clipboard.on('error', function (e) {
+       console.error('Action:', e.action);
+       console.error('Trigger:', e.trigger);
+   });
 });
 
 
