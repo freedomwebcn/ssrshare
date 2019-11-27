@@ -207,6 +207,7 @@
      color: white;
  }
 .ssr .copy_btn_change_color{
+    border: 0;
     outline:none;
 }
  .ssr :nth-child(3) {
