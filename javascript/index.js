@@ -6,7 +6,6 @@ $(".copy_btn_change_color").click(function () {
     //实例化clipboard
     var clipboard = new ClipboardJS('#copy_btn_change_color');
     clipboard.on("success", function (e) {
-        console.log(_that.children)
         _that.children[0].style.color = 'red'
         _that.children[0].innerText = '复制成功'
         setTimeout(function () {

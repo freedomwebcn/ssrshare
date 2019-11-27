@@ -206,10 +206,7 @@
  .ssr p i.copy {
      color: white;
  }
-.ssr .copy_btn_change_color{
-    outline:none;
-    border: 0;
-}
+
  .ssr :nth-child(3) {
      font-size: 13px;
  }
