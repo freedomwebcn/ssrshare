@@ -6,16 +6,13 @@ $(".copy_btn_change_color").click(function () {
     //实例化clipboard
     var clipboard = new ClipboardJS('#copy_btn_change_color');
     clipboard.on("success", function (e) {
-        $(_that).children().css({
-            'color': 'red',
-        })
-        $(_that).children().text("复制成功")
+        console.log(_that.children)
+        _that.children[0].style.color = 'red'
+        _that.children[0].innerText = '复制成功'
         setTimeout(function () {
-            $(_that).children().css({
-                'color': ''
-            })
-            $(_that).children().text("点击复制")
-        }, 5000)
+            _that.children[0].style.color = ''
+            _that.children[0].innerText = '点击复制'
+        }, 2000)
         e.clearSelection();
     });
     clipboard.on('error', function (e) {
@@ -44,6 +41,7 @@ $(document).ready(function () {
             $Box_li.clone(true).appendTo($Box_ul);
             Tmove();
         }
+
         function Tmove() {
             //运动是移动left 从0到-s;
             left -= v;
