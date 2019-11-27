@@ -1,27 +1,29 @@
-$(".copy_btn_change_color").click(function () {
-    const _that = this
-    let e = document.getElementById("copy_text").innerText;
-    let t = document.getElementById("input");
-    t.value = e;
-    //实例化clipboard
-    var clipboard = new ClipboardJS('#copy_btn_change_color');
-    clipboard.on("success", function (e) {
-        _that.children[0].style.color = 'red'
-        _that.children[0].innerText = '复制成功'
-        setTimeout(function () {
-            _that.children[0].style.color = ''
-            _that.children[0].innerText = '点击复制'
-        }, 2000)
-        e.clearSelection();
-    });
-    clipboard.on('error', function (e) {
-        $(_that).children().css({
-            'color': 'red',
-        })
-        $(_that).children().text("复制失败")
-    });
-});
 $(document).ready(function () {
+    // 复制功能
+    $(".copy_btn_change_color").click(function () {
+        const _that = this
+        let e = document.getElementById("copy_text").innerText;
+        let t = document.getElementById("input");
+        t.value = e;
+        //实例化clipboard
+        var clipboard = new ClipboardJS('#copy_btn_change_color');
+        clipboard.on("success", function (e) {
+            _that.children[0].style.color = 'red'
+            _that.children[0].innerText = '复制成功'
+            setTimeout(function () {
+                _that.children[0].style.color = ''
+                _that.children[0].innerText = '点击复制'
+            }, 2000)
+            e.clearSelection();
+        });
+        clipboard.on('error', function (e) {
+            $(_that).children().css({
+                'color': 'red',
+            })
+            $(_that).children().text("复制失败")
+        });
+    });
+    //无缝滚动
     var box0 = $(".loop_img"),
         v0 = 0.6; //这里添加滚动的对象和其速率
     Rin(box0, v0);
