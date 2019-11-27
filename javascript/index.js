@@ -12,7 +12,7 @@ $(document).ready(function () {
             _that.children[0].innerText = '复制成功'
             setTimeout(function () {
                 _that.children[0].style.color = ''
-                _that.children[0].innerText = '点击复制'
+                _that.children[0].innerText = '点此复制SSR链接'
             }, 3000)
             e.clearSelection();
         });
