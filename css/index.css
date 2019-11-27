@@ -80,7 +80,10 @@
 
  .explain div.notice {
      margin-top: 0.39978678rem;
+
  }
+
+
 
  .explain span {
      font-family: 'icomoon';
@@ -190,15 +193,71 @@
      line-height: 23px;
  }
 
- .ssr p::before {
+ /* .ssr p::before {
      content: '';
      display: inline-block;
      width: 10px;
      height: 10px;
      background-color: rgb(8, 248, 8);
      border-radius: 50%;
+ } */
+ .wave {
+     position: relative;
+     width: 50px;
+     height: 50px;
+     display: inline-block;
+     text-align: center;
+     line-height: 50px;
+     font-size: 16px;
  }
 
+ .wave .circle {
+     position: absolute;
+     border-radius: 50%;
+     opacity: 0;
+ }
+
+ .wave.ripple.warning {
+     color: rgb(95, 250, 6);
+ }
+
+ .wave.ripple.warning .circle {
+     border-color: rgb(139, 255, 6);
+ }
+
+ /* 波动效果 */
+ .wave.solid .circle {
+     width: 100%;
+     height: 100%;
+     background: #fff;
+ }
+
+ .wave.solid .circle:first-child {
+     animation: circle-opacity 2s infinite;
+ }
+
+ .wave.solid.warning,
+ .circle {
+     color: rgb(139, 255, 6);
+ }
+
+ .wave.solid.warning .circle {
+     background: rgb(139, 255, 6);
+ }
+
+ @keyframes circle-opacity {
+     from {
+         opacity: 1;
+         transform: scale(0);
+     }
+
+     to {
+         opacity: 0;
+         transform: scale(1);
+     }
+ }
+
+ /* --- */
  .ssr p i {
      margin-left: 3px;
  }
@@ -210,6 +269,7 @@
  .ssr .set_bgc {
      background: url(../images/map.png) no-repeat;
      background-size: 100% 100%;
+ 
  }
 
  .ssr .copy_btn_change_color {

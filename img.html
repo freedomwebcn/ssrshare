@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="../ssrshare/javascript/clipboard.js-master/clipboard.min.js"></script>
+    <title>CSS实战 - 波纹扩散效果</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg">
 
-    <title>Document</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        /************以下为具体实现************/
+        .wave {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 16px;
+        }
+
+        .wave .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .wave.ripple.warning {
+            color: rgb(95, 250, 6);
+        }
+
+        .wave.ripple.warning .circle {
+            border-color: rgb(139, 255, 6);
+        }
+
+        /* 波动效果 */
+        .wave.solid .circle {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        .wave.solid .circle:first-child {
+            animation: circle-opacity 2s infinite;
+        }
+
+        .wave.solid.warning,
+        .circle {
+            color: rgb(139, 255, 6);
+        }
+
+        .wave.solid.warning .circle {
+            background: rgb(139, 255, 6);
+        }
+
+        @keyframes circle-opacity {
+            from {
+                opacity: 1;
+                transform: scale(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="code-box">
-        <p class="code-num" id="codeNum">AE86123456</p>
-        <textarea id="input" style="opacity: 0;z-index: -1;"></textarea>
-        <p class="code-btn copy" id="codeBtn" data-clipboard-target="#input">复制邀请码</p>
+    <div class="wave solid warning">
+        <div class="circle"></div>
+        <div class="content">
+            <i class="fa fa-bell"></i>
+        </div>
     </div>
-    <script>
-        $(".code-btn").click(function(){
-        let e = document.getElementById("codeNum").innerText;
-        let t = document.getElementById("input");
-        t.value = e;
-        //实例化clipboard
-        var clipboard = new ClipboardJS('#codeBtn');
-        clipboard.on("success", function(e){
-        $(".alertMsg").html("复制成功！");
-        $(".modal-bg").css("display", "block");
-        e.clearSelection();
-        });
-        clipboard.on("error", function(e){
-        $(".alertMsg").html("请选择“拷贝”进行复制!");
-        $(".modal-bg").css("display", "block");
-        });
-        });
-    </script>
 </body>
+
 </html>
