@@ -217,6 +217,15 @@
      opacity: 0;
  }
 
+ .wave.ripple.danger {
+     color: rgba(250, 22, 6, 0.719);
+     z-index: 66;
+ }
+
+ .wave.ripple.danger .circle {
+     background-color: rgb(250, 22, 6);
+ }
+
  .wave.ripple.warning {
      color: rgb(95, 250, 6);
  }
@@ -269,7 +278,7 @@
  .ssr .set_bgc {
      background: url(../images/map.png) no-repeat;
      background-size: 100% 100%;
- 
+
  }
 
  .ssr .copy_btn_change_color {

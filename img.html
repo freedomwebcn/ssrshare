@@ -3,78 +3,88 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CSS实战 - 波纹扩散效果</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg">
-
-    <style type="text/css">
-        body {
-            margin: 0;
+    <title>地图</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
         }
 
-        /************以下为具体实现************/
-        .wave {
-            position: relative;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            font-size: 16px;
-        }
-
-        .wave .circle {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0;
-        }
-
-        .wave.ripple.warning {
-            color: rgb(95, 250, 6);
-        }
-
-        .wave.ripple.warning .circle {
-            border-color: rgb(139, 255, 6);
-        }
-
-        /* 波动效果 */
-        .wave.solid .circle {
+        .bg {
             width: 100%;
-            height: 100%;
-            background: #fff;
+            height: 770px;
+            position: relative;
         }
 
-        .wave.solid .circle:first-child {
-            animation: circle-opacity 2s infinite;
+        .bg .content {
+            width: 748px;
+            height: 618px;
+            position: absolute;
+            left: 410px;
+            top: 60px;
         }
 
-        .wave.solid.warning,
-        .circle {
-            color: rgb(139, 255, 6);
+        .bg .content div {
+            background: #009FD9;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: relative;
         }
 
-        .wave.solid.warning .circle {
-            background: rgb(139, 255, 6);
+        .bg .content p {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: myfirst 5s infinite;
+            box-shadow: 0px 0px 1px #009FD9;
         }
 
-        @keyframes circle-opacity {
-            from {
-                opacity: 1;
-                transform: scale(0);
+        .bg .content span {
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: myfirst 5s infinite;
+            box-shadow: 0px 0px 1px #009FD9;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes myfirst {
+            20% {
+                transform: scale(2);
             }
 
-            to {
-                opacity: 0;
-                transform: scale(1);
+            40% {
+                transform: scale(3);
             }
-        }
+
+            60% {
+                transform: scale(4);
+            }
+
+            80% {
+                transform: scale(5);
+            }
+
+            100% {
+                transform: scale(6);
+
+                150% {
+                    transform: scale(7);
+                }
+            }
     </style>
 </head>
 
 <body>
-    <div class="wave solid warning">
-        <div class="circle"></div>
+    <div class="bg">
         <div class="content">
-            <i class="fa fa-bell"></i>
+            <div class="one">
+                <p></p><span></span>
+            </div>
         </div>
     </div>
 </body>
