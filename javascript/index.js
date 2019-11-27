@@ -9,19 +9,22 @@ $(".copy_btn_change_color").click(function () {
         $(_that).children().css({
             'color': 'red',
         })
-         $(_that).children().text("复制成功")
+        $(_that).children().text("复制成功")
         setTimeout(function () {
             $(_that).children().css({
                 'color': ''
             })
             $(_that).children().text("点击复制")
-        },5000)
+        }, 5000)
         e.clearSelection();
     });
-   clipboard.on('error', function (e) {
-       console.error('Action:', e.action);
-       console.error('Trigger:', e.trigger);
-   });
+    clipboard.on('error', function (e) {
+        $(_that).children().css({
+            'color': 'red',
+        })
+        $(_that).children().text("复制失败")
+
+    });
 });
 
 
