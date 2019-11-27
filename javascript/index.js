@@ -13,7 +13,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 _that.children[0].style.color = ''
                 _that.children[0].innerText = '点击复制'
-            }, 2000)
+            }, 3000)
             e.clearSelection();
         });
         clipboard.on('error', function (e) {
