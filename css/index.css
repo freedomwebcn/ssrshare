@@ -123,7 +123,8 @@
 
 
  .explain div.notice .detail,
- .ssr {
+ .ssr,
+ .same_css div.msk {
      border-top-left-radius: 5px;
      border-top-right-radius: 5px;
      border-bottom-left-radius: 5px;
@@ -317,10 +318,6 @@
      position: absolute;
      top: 0;
      left: 0;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
-     border-bottom-left-radius: 5px;
-     border-bottom-right-radius: 5px;
      background-color: rgba(0, 0, 0, 0.4)
  }
 
