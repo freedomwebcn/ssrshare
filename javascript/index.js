@@ -6,7 +6,7 @@ $(document).ready(function () {
         let t = document.getElementById("input");
         t.value = e;
         //实例化clipboard
-        var clipboard = new ClipboardJS('#copy_btn_change_color');
+        const clipboard = new ClipboardJS('#copy_btn_change_color');
         clipboard.on("success", function (e) {
             _that.children[0].style.color = 'red'
             _that.children[0].innerText = '复制成功'
@@ -29,7 +29,7 @@ $(document).ready(function () {
     Rin(box0, v0);
 
     function Rin($Box, v) { //$Box移动的对象，v对象移动的速率
-        var $Box_ul = $Box.find("ul"),
+        let $Box_ul = $Box.find("ul"),
             $Box_li = $Box_ul.find("li"),
             left = 0,
             allLiWidth = 0,

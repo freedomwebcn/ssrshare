@@ -83,8 +83,6 @@
 
  }
 
-
-
  .explain span {
      font-family: 'icomoon';
      color: rgb(152, 158, 180) !important;
@@ -111,7 +109,6 @@
      background-color: rgb(229, 229, 229);
 
  }
-
 
  .explain div div.notice_content {
      text-indent: 1.2em;
@@ -147,7 +144,6 @@
      margin-top: 0px;
  }
 
-
  .explain div.notice .warning {
      background-color: rgb(18, 183, 245);
      color: #333;
@@ -161,7 +157,6 @@
  }
 
  .ssr {
-     /* background-color: rgb(22, 29, 45); */
      background-image: linear-gradient(to right, rgb(8, 196, 223), rgb(41, 181, 239));
      text-align: center;
      color: black;
@@ -172,7 +167,6 @@
  .ssr div {
      font-size: 13px;
  }
-
 
  .ssr h2 {
      margin-bottom: 0;
@@ -193,14 +187,6 @@
      line-height: 23px;
  }
 
- /* .ssr p::before {
-     content: '';
-     display: inline-block;
-     width: 10px;
-     height: 10px;
-     background-color: rgb(8, 248, 8);
-     border-radius: 50%;
- } */
  .wave {
      position: relative;
      width: 50px;
@@ -278,7 +264,6 @@
  .ssr .set_bgc {
      background: url(../images/map.png) no-repeat;
      background-size: 100% 100%;
-
  }
 
  .ssr .copy_btn_change_color {
@@ -296,18 +281,12 @@
      color: black;
      margin-bottom: 0.39978678rem;
      position: relative;
-     /* background-color: rgb(120, 205, 248); */
      background-image: linear-gradient(to right, rgb(242, 217, 247), rgb(179, 146, 252));
-
-
  }
 
  .v2ray p::before {
      background-color: rgb(248, 8, 8);
-
  }
-
-
 
  .v2ray .copy_btn {
      text-align: center;
@@ -328,8 +307,6 @@
      height: 2.133333rem;
      overflow: hidden;
      position: relative;
-     /* background-color: rgb(120, 205, 248); */
-     /* background-image: linear-gradient(rgb(0, 136, 222), rgb(1, 93, 194)); */
      border-bottom-left-radius: 5px;
      border-bottom-right-radius: 5px;
      margin-bottom: 0.39978678rem;
