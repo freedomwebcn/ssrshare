@@ -64,6 +64,8 @@
  .explain div.header {
      display: flex;
      flex-direction: column;
+     padding-left: .133333rem;
+     padding-right: .133333rem;
      background-image: linear-gradient(to right, rgb(75, 143, 255), rgb(32, 206, 254));
  }
 
@@ -75,7 +77,6 @@
  .explain div.header i {
      align-self: flex-end;
      color: rgb(146, 217, 254);
-     margin-right: .133333rem;
  }
 
  .explain div.notice {
