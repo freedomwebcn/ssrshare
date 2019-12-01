@@ -9,10 +9,10 @@ $(document).ready(function () {
         const clipboard = new ClipboardJS('#copy_btn_change_color');
         clipboard.on("success", function (e) {
             _that.children[0].style.color = 'red'
-            _that.children[0].innerText = '复制成功'
+            _that.children[0].innerText = ''
             setTimeout(function () {
                 _that.children[0].style.color = ''
-                _that.children[0].innerText = '点此复制SSR链接'
+                _that.children[0].innerText = ''
             }, 3000)
             e.clearSelection();
         });
