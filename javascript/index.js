@@ -25,7 +25,7 @@ $(document).ready(function () {
     // });
     //无缝滚动
     var box0 = $(".loop_img"),
-        v0 = 1; //这里添加滚动的对象和其速率
+        v0 = 0.6; //这里添加滚动的对象和其速率
     Rin(box0, v0);
 
     function Rin($Box, v) { //$Box移动的对象，v对象移动的速率
