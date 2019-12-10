@@ -60,18 +60,15 @@
      height: 1px;
  }
 
-
  .explain div.header {
      display: flex;
      flex-direction: column;
-     padding-left: .133333rem;
-     padding-right: .133333rem;
+     padding: 0 .133333rem 0 .133333rem;
      background-image: linear-gradient(to right, rgb(75, 143, 255), rgb(32, 206, 254));
  }
 
  .explain div.header h2 {
      color: white;
-
  }
 
  .explain div.header i {
@@ -81,7 +78,6 @@
 
  .explain div.notice {
      margin-top: 0.39978678rem;
-
  }
 
  .explain span {
@@ -100,7 +96,6 @@
  .explain div.notice_title {
      display: flex;
      flex-wrap: wrap;
-
      text-indent: 1.2em;
  }
 
@@ -108,7 +103,6 @@
      margin-top: 0.21321961rem;
      margin-bottom: 0.13326226rem;
      background-color: rgb(229, 229, 229);
-
  }
 
  .explain div div.notice_content {
@@ -315,8 +309,9 @@
 
  .loop_img ul {
      height: 2.133333rem;
-     width: 1333.333333rem;
+     width: 100%;
      display: flex;
+     justify-content: space-around;
      align-items: center;
      margin: 0;
      padding: 0;
@@ -345,7 +340,6 @@
      align-items: center;
      justify-content: center;
      flex-wrap: wrap;
-
  }
 
  .footer a {
@@ -380,6 +374,4 @@
  .same_css .msk .msk_img {
      width: 100%;
      height: 100%;
-
-
  }
