@@ -4,7 +4,7 @@ $(document).ready(function () {
         const _that = this
         let e = document.getElementById("copy_text").innerText;
         let t = document.getElementById("input");
-        console.log(t)
+        console.log(e)
         t.value = e;
         //实例化clipboard
         const clipboard = new ClipboardJS('#copy_btn_change_color');
